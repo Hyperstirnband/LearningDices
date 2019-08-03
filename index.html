@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
+  <meta name="description" content="Learning Dices is an app helping to learn a language by letting you tell a cool story to native speakers and encouraging conversations and mutual learning.">
   <meta name="author" content="">
-  <title>Learning Dices: Learn languages with story cubes</title>
+  <title>Learning Dices - Tell a story and learn a language</title>
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom fonts for this template -->
@@ -19,9 +19,93 @@
   <link rel="stylesheet" href="device-mockups/device-mockups.min.css">
   <!-- Custom styles for this template -->
   <link href="css/new-age.min.css" rel="stylesheet">
+  <!-- Analytics Pop up -->
+  <script src="./jquery-3.4.1.js"></script>
+  <script src="./bootstrap-3.4.1-dist/js/bootstrap.js"></script>
+  <script> $(window).on('load', function(){        
+   $('#analyticspopup').modal('show');
+    }); 
+  </script>
+  <!--<link rel="stylesheet" type="text/css" href="./cookieconsent-master/cookieconsent-master/src/cookieconsent.min.css">
+  <script src="./cookieconsent-master/cookieconsent-master/src/cookieconsent.js"></script>
+  <script> window.addEventListener("load", function(){
+	window.cookieconsent.initialise({
+		"palette": {
+		"popup": { "background": "#000"},
+		"button": { "background": "#f1d600" }
+		},
+		"theme": "classic",
+		"type": "pop-up",
+		"content": {
+		"message": "We are using Cookies and Google Analytics to find out if you are interested in our app",
+		
+		"allow": "Ok!" ,
+		}
+	})
+}); -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-144123317-1"></script>
+  <script> window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-144123317-1');
+</script>
+  <script> var gaProperty = 'UA-144123317-1'; 
+    var disableStr = 'ga-disable-' + gaProperty; 
+    if (document.cookie.indexOf(disableStr + '=true') > -1) { 
+        window[disableStr] = true;
+    } 
+    function gaOptout() { 
+        document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/'; 
+        window[disableStr] = true; 
+        alert('Das Tracking ist jetzt deaktiviert'); 
+    } 
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ 
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), 
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) 
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); 
+
+    ga('create', 'UA-144123317-1', 'auto'); 
+    ga('set', 'anonymizeIp', true); 
+    ga('send', 'pageview'); 
+</script>
+<!-- autotrack Google Analytics-->
+	<script src="./autotrack/autotrack.js"></script>
+	<script async src="https://www.google-analytics.com/analytics.js"></script>
+	<script>
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-144123317-1', 'auto');
+
+	// Replace the following lines with the	 plugins you want to use.
+	ga('require', 'eventTracker');
+	ga('require', 'outboundLinkTracker', {
+		events: ['click', 'auxclick', 'contextmenu']});
+	ga('send', 'pageview');
+	</script>
+	
+
 </head>
 
 <body id="page-top">
+  <!--Analytics PopUp-->
+  <div id="analyticspopup" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">We want to learn!</h4>
+        </div>
+        <div class="modal-body">
+          <p>We are using analytics on this website to find out your interest in our app!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Ok!</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
@@ -42,7 +126,26 @@
       </div>
     </div>
   </nav>
-  <header class="masthead">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"> Menu <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#download">Download</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#features">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <header class="masthead" id="vision">
     <div class="container h-100">
       <div class="row">
         <div class="col-md-12">
@@ -53,7 +156,11 @@
           <div class="header-content mx-auto">
             <h1 class="mb-5">Learning Dices</h1>
             <h1 class="mb-5">With Learning Dices we offer a new way to learn a language with the help of native speakers and story cubes&nbsp;</h1>
-            <a href="#download" class="btn btn-outline btn-xl js-scroll-trigger">Start Now for Free!</a>
+            <a href="#download" class="btn btn-outline btn-xl js-scroll-trigger" 
+			ga-on="click"
+			ga-event-category="Download"
+			ga-event-action="download">Start now
+				>Start now for Free!</a>
           </div>
         </div>
         <div class="col-lg-5 my-auto">
@@ -62,7 +169,7 @@
               <div class="device">
                 <div class="screen">
                   <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                  <img src="img/demo-screen-1.jpg" class="img-fluid" alt="">
+                  <img src="img/Demoscreen.jpg" class="img-fluid" alt="">
                 </div>
                 <div class="button">
                   <!-- You can hook the "home button" to some JavaScript events or just remove it -->
@@ -74,7 +181,7 @@
       </div>
     </div>
   </header>
-  <section class="download text-center" style="background-image: linear-gradient(to left bottom, rgba(189, 195, 199, .75), rgba(44, 62, 80, .75)); background-size: 100%;" id="download">
+  <section class="download text-center" id="download" style="background-image: linear-gradient(to left bottom, rgba(189, 195, 199, .75), rgba(44, 62, 80, .75)); background-size: 100%;">
     <div class="container">
       <div class="row">
         <div class="col-md-8 mx-auto">
@@ -101,7 +208,7 @@
               <div class="device">
                 <div class="screen">
                   <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                  <img src="img/demo-screen-1.jpg" class="img-fluid" alt="">
+                  <img src="img/Demoscreen.jpg" class="img-fluid" alt="">
                 </div>
                 <div class="button">
                   <!-- You can hook the "home button" to some JavaScript events or just remove it -->
@@ -115,14 +222,14 @@
             <div class="row">
               <div class="col-lg-6">
                 <div class="feature-item" style="">
-                  <i class="icon-screen-smartphone text-primary"></i>
+				  <i class="fas fa-brain text-primary"></i>
                   <h3>Learn the natural way</h3>
                   <p class="text-muted">Use the N400 signal to learn a new language by speaking and getting instant corrections: No Grammar lessons, No flashcards - just fun conversations</p>
                 </div>
               </div>
               <div class="col-lg-6">
                 <div class="feature-item">
-                  <i class="icon-camera text-primary"></i>
+				  <i class="fas fa-spell-check text-primary"></i>
                   <h3>Get feedback from a native speaker</h3>
                   <p class="text-muted">Send your story to a native speaker and get corrections and improve your language skills</p>
                 </div>
@@ -131,14 +238,14 @@
             <div class="row">
               <div class="col-lg-6">
                 <div class="feature-item">
-                  <i class="icon-present text-primary"></i>
+				  <i class="far fa-comments text-primary"></i>
                   <h3>Learn new words</h3>
                   <p class="text-muted">Our Google Translate integration helps you to find missing words and add them to your vocabulary</p>
                 </div>
               </div>
               <div class="col-lg-6">
                 <div class="feature-item">
-                  <i class="icon-lock-open text-primary"></i>
+				  <i class="fas fa-dice-d6 text-primary"></i>
                   <h3>Story Cubes</h3>
                   <p class="text-muted">Invent a story based on the dices symbols in the language you are learning</p>
                 </div>
@@ -159,36 +266,55 @@
       </div>
     </div>
   </section>
-  <div class="py-5 text-center" style="background-image: linear-gradient(to left bottom, rgba(189, 195, 199, .75), rgba(44, 62, 80, .75)); background-size: 100%;" id="contact">
-    <div class="container">
-      <div class="row">
-        <div class="mx-auto col-md-6">
-          <h1 class="m-1">Keep me informed</h1>
-          <form class="form-inline d-flex justify-content-center">
-            <div class="input-group"> <input type="email" class="form-control" placeholder="Your email" id="form1">
-              <div class="input-group-append"> <button class="btn btn-primary" type="button">Subscribe</button> </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
   <footer>
     <div class="container">
       <p>© Learning Dices 2019. All Rights Reserved.</p>
       <ul class="list-inline">
         <li class="list-inline-item">
-          <a href="#">Privacy</a>
-        </li>
-        <li class="list-inline-item">
-          <a href="#">Terms</a>
-        </li>
-        <li class="list-inline-item">
-          <a href="#">FAQ</a>
+          <a href="#">Datenschutz &amp; Impressum</a>
         </li>
       </ul>
     </div>
   </footer>
+  <div class="py-5 text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="mb-3">Datenschutz &amp; Impressum</h3>
+          <p>
+          </p>
+          <div class="impressum">
+            <h3>Impressum</h3>
+            <p>Angaben gemäß § 5 TMG</p>
+            <p>Karsten Ernst <br> Germaniastraße 13<br> 80802 München <br>
+            </p>
+            <p> <strong>Vertreten durch: </strong><br> Karsten Ernst<br> Bastian Migge<br>
+            </p>
+            <p><strong>Kontakt:</strong> <br> Telefon: 01234-789456<br> E-Mail: <a href="mailto:Kar.Ernst@outlook.com">E-Mail</a><br></p>
+            <p><strong>Haftungsausschluss: </strong><br><br><strong>Haftung für Inhalte</strong><br><br> Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.<br><br><strong>Haftung für Links</strong><br><br> Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.<br><br><strong>Urheberrecht</strong><br><br> Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.<br><br><strong>Datenschutz</strong><br><br> Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder eMail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben. <br> Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich. <br> Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit ausdrücklich widersprochen. Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-Mails, vor.<br>
+              <br><br><strong>Google Analytics</strong><br><br> </p>
+            <p>If you have given your consent, Google Analytics, a web analysis service of Google Ireland Limited ("Google") is used on this website. The use includes the "Universal Analytics" operating mode. This makes it possible to assign data, sessions and interactions across multiple devices to a pseudonymous user ID and thus analyze a user's activities across devices. This data protection notice is provided by <a href="https://www.intersoft-consulting.de" target="_blank">www.intersoft-consulting.de</a>.</p>
+            <p>Google Analytics uses "cookies", which are text files placed on your computer, to help the website analyze how users interact with the site. The information generated by the cookie about your use of this website is usually transferred to a Google server in the USA and stored there. However, if IP anonymisation is activated on this website, Google will reduce your IP address within Member States of the European Union or in other states party to the Agreement on the European Economic Area beforehand. We would like to point out that on this website Google Analytics has been extended to include IP anonymisation in order to ensure anonymous collection of IP addresses (so-called IP masking). The IP address transmitted by your browser in the context of Google Analytics is not merged with other Google data. For more information on terms of use and data protection, please visit <a href="https://www.google.com/analytics/terms/gb.html" target="_blank">https://www.google.com/analytics/terms/gb.html</a> or <a href="https://policies.google.com/?hl=en" target="_blank">https://policies.google.com/?hl=en</a>.</p>
+            <p><strong>Purposes of the Processing</strong><br> On behalf of the operator of this website, Google will use this information to evaluate your use of the website, to compile reports on website activity and to provide the website operator with other services related to website and Internet use.</p>
+            <p><strong>Legal Basis</strong><br> The legal basis for the use of Google Analytics is your consent in accordance with <a href="https://gdpr-info.eu/art-6-gdpr/" target="_blank">Art. 6 para. 1 lit. a GDPR</a>.</p>
+            <p><strong>Recipients or Categories of Recipients</strong><br> The recipient of the collected data is Google.</p>
+            <p><strong>Transfer to Third Countries</strong><br> Personal data will be transferred to the USA under the EU-US Privacy Shield on the basis of the European Commission's adequacy decision. You can download the certificate <a href="https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI">here</a>.</p>
+            <p><strong>Duration of Data Storage</strong><br> The data sent by us and linked to cookies, user-identifiers (e.g. User-IDs) or advertising-identifiers are automatically deleted after 14 months. Data whose retention period has been reached is automatically deleted once a month.</p>
+            <p><strong>Rights of the Persons affected</strong><br> You can revoke your consent at any time with effect for the future by blocking the storage of cookies by setting your browser software accordingly; however, we would like to point out that in this case you may not be able to use all functionalities of this website to their full extent.</p>
+            <p>You can also prevent Google from collecting the data generated by the cookie and relating to your use of the website (including your IP address) and from processing this data by Google by downloading and installing the <a href="https://tools.google.com/dlpage/gaoptout?hl=en" target="_blank">Browser Add-on</a>. Opt-out cookies will prevent future collection of your data when you visit this website. To prevent Universal Analytics from collecting data across different devices, you must opt-out on all systems used. If you click here, the opt-out cookie will be set: <a href="javascript:gaOptout()"><strong>Disable Google Analytics</strong></a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
